@@ -1,7 +1,7 @@
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 // import "./ContactPage.css"
-import "./homePage.css";
+import "./HomePage.css";
 const ContactPage = ()=> {
     return(
 
