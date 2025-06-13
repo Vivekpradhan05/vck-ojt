@@ -1,7 +1,7 @@
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
-// import "./ApplyNow.css";
-import "./homePage.css";
+import "./ApplyNow.css";
+// import "./homePage.css";
 const ApplyNow =()=>{
     return(
         <>
