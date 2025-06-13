@@ -2,7 +2,7 @@
 // import "./style.css"
 import {Route,BrowserRouter as Router, Routes}from "react-router-dom"
 import AboutPage from "./pages/AboutPage";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/HomePage"
 import CoursesPage from "./pages/CoursesPage";
 import ContactPage from "./pages/ContactPage";
 import ApplyNow from "./pages/ApplyNow";
