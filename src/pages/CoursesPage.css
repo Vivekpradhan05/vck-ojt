@@ -1,0 +1,161 @@
+/* .contents{
+    
+    position: relative;
+    background-color: #52d2d2;
+    justify-content: center;
+    align-items: flex;
+    padding: 20px;
+    height: 100%;
+    width: 100vw;
+} */
+
+.home-scroll{
+  overflow-y: auto;
+  overflow-x: visible;
+  /* padding: 2rem; */
+  width: 941.6px;
+  height: 541px;
+ justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 6px #0000001a;
+  /* margin: 2rem auto; */
+  font-family: Arial, sans-serif;
+  color: #333;
+  flex-grow: 1;
+  min-height: calc(100vh - 4rem); 
+  /* margin: 2rem auto; */
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+.content {
+    background-color: #52d2d2;
+    flex-grow: 1;
+    /* display: flex; */
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    width: 100%;
+}
+
+.page-containers{
+  max-width: 960px;
+  /* Max width for content to prevent it from stretching too wide */
+  height: 500px;
+  margin: 20px 116px;
+  /* Center the content with some top/bottom margin */
+  padding: 20px;
+  background-color: #FFFFFF;
+  /* White background for page content */
+  border-radius: 8px;
+  /* Slightly rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  /* Subtle shadow */
+}
+.page-containers h1{
+    color: #007BFF;
+  /* Primary blue for headings */
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2.5em;
+}
+.page-containers p{
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+.page-containers h2{
+    color: #343a40;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+.video-containers{
+ margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #000;
+  /* Black background for video */
+  border-radius: 8px;
+  overflow: hidden;
+  /* Ensures video corners are rounded */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.video-caption{
+    text-align: center;
+    padding: 10px;
+    color: #777;
+    font-style: italic;
+    background-color:#f0f0f0 ;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.page-containers ul{
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    color: #555;
+}
+.page-containers li{
+    margin-bottom: 8px;
+}
+
+.admission-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-color:#f8f9fa ;
+    box-shadow: 0 2px 8px #0000000d;
+    color: black;
+
+    
+
+  
+
+}
+ table{
+ display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    unicode-bidi: isolate;
+    border-spacing: 2px;
+    border-color: black;
+    border: 2px solid black;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    unicode-bidi: isolate;
+    border-color: inherit;
+   
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+    unicode-bidi: isolate;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+.admissions-table td {
+    border: 1px solid #DEE2E6;
+    padding: 12px;
+    text-align: left;
+    font-size: .95em;
+}

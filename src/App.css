@@ -1,0 +1,16 @@
+
+
+/* Home page */
+.main-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #F4F7F6;
+  /* A very light grey background for the whole app */
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
