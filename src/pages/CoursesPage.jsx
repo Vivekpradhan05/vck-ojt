@@ -11,7 +11,7 @@ const CoursesPage=()=>{
        <Header/>
 
     {/*Page content */}
-
+<div className="main-layout"> 
  <div className="home-scroll">
   <div className="content">
      <div className="page-containers"> 
@@ -111,12 +111,12 @@ const CoursesPage=()=>{
   </div>
 
 
-
+ </div>
 
 
 
      <Footer/>
-    
+   
     </>
 
  )

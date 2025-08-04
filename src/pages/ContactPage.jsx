@@ -7,7 +7,7 @@ const ContactPage = ()=> {
 
       <>
            <Header/>
-
+<div className="main-layout">  
     <div className="home-scroll">
        <div className="content">
                   <div className="page-container">
@@ -68,6 +68,8 @@ const ContactPage = ()=> {
 
                   </div>
               </div>
+</div>
+
 </div>
                <Footer/>
       </>

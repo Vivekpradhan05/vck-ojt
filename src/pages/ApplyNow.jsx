@@ -7,7 +7,7 @@ const ApplyNow =()=>{
         <>
          <Header/>
 
-
+<div className="main-layout"> 
 <div className="home-scroll">
         <div className="content">
             <div className="page-container">
@@ -65,7 +65,7 @@ const ApplyNow =()=>{
             </div>
          </div>
 </div>
-
+</div>
             <Footer/>
         </>
          

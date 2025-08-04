@@ -6,7 +6,7 @@ const AboutPage =()=> {
     return(
           <>
           <Header/>
-          
+   <div className="main-layout">        
       <div className="home-scroll">
           <div className="content">
 
@@ -31,6 +31,8 @@ const AboutPage =()=> {
           </div>
           
           </div> 
+
+    </div> 
          <Footer/>
           
           </>

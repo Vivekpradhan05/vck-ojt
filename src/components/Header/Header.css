@@ -85,7 +85,7 @@ header {
   /* Make header sticky */
   top: 0;
   z-index: 999;
-  /* width: 100%; */
+  width: 100%;
   /* Ensure header is above other content */
 }
 
@@ -144,26 +144,35 @@ header {
 }
 
 /* Hamburger Menu Button (hidden by default on desktop) */
-.hamburger-menu {
-  display: none;
-  /* Hide on desktop */
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  position: relative;
-  z-index: 1002;
-  /* Ensure it's above the drawer if needed */
-}
 
-.hamburger-icon {
-  display: block;
-  width: 30px;
-  height: 3px;
-  background-color: white;
-  margin: 6px 0;
-  transition: all 0.3s ease;
-}
+.hamburger-menu {
+    display: none;
+    /* Hide on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    right: 1.5rem; /* adjust this to push away from edge */
+    transform: translateY(-50%);
+    z-index: 1002;
+    /* Ensure it's above the drawer if needed */
+  }
+  
+  .hamburger-icon {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: all 0.3s ease;
+  }
+
+
+
+
+
 
 /* Drawer Navigation (hidden by default) */
 .drawer-nav {
