@@ -123,70 +123,65 @@ li{
  */
 
 * {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
  
 .main-layout {
-  min-height: 100vh;
+  position: fixed;
+  top: 70px;
+  bottom: 60px;
+  left: 0;
+  right: 0;
   width: 100%;
   background-color: #52d2d2;
-  /* A very light grey background for the whole app */
   padding: 20px;
- flex-grow: 1;
- display: flex;
-  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
 }
 
-
-.home-scroll{
+.home-scroll {
   overflow-y: auto;
-  overflow-x: visible;
-  /* padding: 2rem; */
-  width: 941.6px;
-  height: 541px;
- justify-content: center; /* Center horizontally */
-  align-items: center;     /* Center vertically */
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 6px #0000001a;
-  /* margin: 2rem auto; */
-  font-family: Arial, sans-serif;
-  color: #333;
-  flex-grow: 1;
-  min-height: calc(100vh - 4rem); 
-  /* margin: 2rem auto; */
+  overflow-x: hidden;
+  width: 100%;
   max-width: 1200px;
-  box-sizing:2px  border-box;
+  height: 100%;
+  background-color: #52d2d2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .content {
     background-color: #f9f9f9;
-    flex-grow: 1;
-    /* display: flex; */
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
     width: 100%;
+    max-width: 960px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
 }
 
 /* src/pages/pages.css  */
 .page-container {
   max-width: 960px;
-  /* Max width for content to prevent it from stretching too wide */
-  height: 500px;
+  width: 100%;
+  min-height: 500px;
+  height: auto;
   margin: 20px auto;
-  /* Center the content with some top/bottom margin */
   padding: 20px;
   background-color: #FFFFFF;
-  /* White background for page content */
   border-radius: 8px;
-  /* Slightly rounded corners */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  /* Subtle shadow */
 }
 
 .page-container h1 {
@@ -414,8 +409,9 @@ li{
 
 /* Adjustments for the new course details table  */
 .course-details-table {
-  /* For example: */
-  /* font-size: 0.9em; */
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
 /* CSS Animation Definitions */
@@ -444,72 +440,110 @@ li{
 
 
 /* --- Basic Responsive Styles --- */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .main-layout {
+    padding: 15px;
+  }
+
   .page-container {
     margin: 15px auto;
-    /* Slightly less margin on smaller screens */
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-layout {
+    padding: 10px;
+    top: 70px;
+    bottom: 60px;
+  }
+
+  .home-scroll {
+    border-radius: 4px;
+  }
+
+  .content {
     padding: 15px;
-    /* Slightly less padding */
+  }
+
+  .page-container {
+    margin: 10px auto;
+    padding: 15px;
+    min-height: auto;
+  }
+
+  .page-container h1 {
+    font-size: 2em;
+  }
+
+  .page-container h2 {
+    font-size: 1.5em;
   }
 
   /* Home Page - Hero Section */
   .hero-section {
     height: 250px;
-    /* Shorter banner on smaller screens */
+    margin-bottom: 30px;
   }
 
   .hero-overlay-text h1 {
     font-size: 2.2em;
-    /* Smaller heading */
   }
 
   .hero-overlay-text p {
     font-size: 1em;
-    /* Smaller paragraph */
   }
 
   .hero-btn {
     padding: 10px 20px;
-    /* Smaller button */
     font-size: 1em;
   }
 
   /* Image Gallery */
   .image-gallery {
     grid-template-columns: 1fr;
-    /* Stack images in a single column */
+    gap: 15px;
   }
 
   .image-gallery img {
     height: 180px;
-    /* Adjust height for stacked images */
   }
 
   /* Admissions Table */
-  /* .admissions-table, .course-details-table {
-    display: block; /* Make table block level */
-  /* overflow-x: auto; Enable horizontal scroll for table on small screens */
-  /* white-space: nowrap; Prevent content from wrapping inside cells */
-  /* -webkit-overflow-scrolling: touch; For smooth scrolling on iOS */
-  /* } */
-  */ .admissions-table thead,
-  .admissions-table tbody,
-  .admissions-table th,
-  .admissions-table td,
-  .admissions-table tr {
+  .admissions-table {
     display: block;
-    /* Make table elements stack */
-    width: auto;
-    /* Allow natural width */
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
   }
-
 }
 
 @media (max-width: 480px) {
+  .main-layout {
+    padding: 5px;
+    top: 70px;
+    bottom: 60px;
+  }
 
-  /* Further adjustments for very small screens (phones) */
+  .content {
+    padding: 10px;
+  }
+
   .page-container {
     padding: 10px;
+    margin: 5px auto;
+  }
+
+  .page-container h1 {
+    font-size: 1.6em;
+  }
+
+  .page-container h2 {
+    font-size: 1.3em;
+  }
+
+  .hero-section {
+    height: 200px;
   }
 
   .hero-overlay-text h1 {
@@ -518,6 +552,16 @@ li{
 
   .hero-overlay-text p {
     font-size: 0.9em;
+  }
+
+  .hero-btn {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+
+  .call-to-action .btn {
+    padding: 10px 20px;
+    font-size: 0.95em;
   }
 }
 

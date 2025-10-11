@@ -9,43 +9,63 @@
     width: 100vw;
 } */
 * {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: inherit;
-}
-.content {
-    background-color: #f9f9f9;
-    flex-grow: 1;
-    /* display: flex; */
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
-    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .main-layout {
-  min-height: 100vh;
-  width: 1500px;
+  position: fixed;
+  top: 70px;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #52d2d2;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.home-scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 1200px;
   height: 100%;
   background-color: #52d2d2;
-  /* A very light grey background for the whole app */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 
-  align-items: center;
+.content {
+    background-color: #f9f9f9;
+    width: 100%;
+    max-width: 960px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
 }
 
 .page-containers{
   max-width: 960px;
-  /* Max width for content to prevent it from stretching too wide */
-  height: 500px;
+  width: 100%;
+  min-height: 500px;
+  height: auto;
   margin: 20px auto;
-  /* Center the content with some top/bottom margin */
   padding: 20px;
   background-color: #FFFFFF;
-  /* White background for page content */
   border-radius: 8px;
-  /* Slightly rounded corners */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  /* Subtle shadow */
 }
 .page-containers h1{
     color: #007BFF;
@@ -151,4 +171,83 @@ tbody {
     padding: 12px;
     text-align: left;
     font-size: .95em;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .main-layout {
+    padding: 15px;
+  }
+
+  .page-containers {
+    margin: 15px auto;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-layout {
+    padding: 10px;
+    top: 70px;
+    bottom: 60px;
+  }
+
+  .home-scroll {
+    border-radius: 4px;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  .page-containers {
+    margin: 10px auto;
+    padding: 15px;
+    min-height: auto;
+  }
+
+  .page-containers h1 {
+    font-size: 2em;
+  }
+
+  .page-containers h2 {
+    font-size: 1.5em;
+  }
+
+  .admission-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-layout {
+    padding: 5px;
+    top: 70px;
+    bottom: 60px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .page-containers {
+    padding: 10px;
+    margin: 5px auto;
+  }
+
+  .page-containers h1 {
+    font-size: 1.6em;
+  }
+
+  .page-containers h2 {
+    font-size: 1.3em;
+  }
+
+  .video-containers {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }

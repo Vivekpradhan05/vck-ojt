@@ -1,16 +1,23 @@
-
-
-/* Home page */
-.main-layout {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: #F4F7F6;
-  /* A very light grey background for the whole app */
-}
+/* Global App Styles */
 html,
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Main layout - can be overridden by page-specific CSS */
+.main-layout {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #F4F7F6;
 }
